@@ -28,7 +28,7 @@ function createCar() {
 
     const img = document.createElement("img");
 
-    img.src = "images/gtr-r35.png";
+    img.src = "gtr-r35.png";
 
     img.className = "desktop-car";
 
