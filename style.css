@@ -1,39 +1,34 @@
 /* =========================================================
    Wen-Ni Liu Personal Website
-   Modern Academic / AI Research Style
 ========================================================= */
 
-
-/* -------------------------
-   Global variables
-------------------------- */
-
 :root {
-    --bg: #f7f8fc;
-    --bg-soft: #eef2ff;
+    --blue: #1296db;
+    --blue-dark: #0878b8;
+    --blue-light: #dff3ff;
 
-    --text: #172033;
+    --red: #e94b4b;
+    --yellow: #ffd84d;
+
+    --white: #ffffff;
+    --bg: #f5fbff;
+
+    --text: #203040;
     --text-soft: #64748b;
 
-    --primary: #6366f1;
-    --primary-dark: #4338ca;
-    --secondary: #8b5cf6;
-
-    --border: rgba(148, 163, 184, 0.22);
-
-    --card-bg: rgba(255, 255, 255, 0.78);
+    --border: rgba(18, 150, 219, 0.18);
 
     --shadow:
-        0 10px 30px rgba(15, 23, 42, 0.07);
+        0 12px 30px rgba(18, 150, 219, 0.10);
 
     --shadow-hover:
-        0 20px 45px rgba(79, 70, 229, 0.13);
+        0 18px 40px rgba(18, 150, 219, 0.18);
 }
 
 
-/* -------------------------
-   Basic reset
-------------------------- */
+/* =========================================================
+   Global
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -63,230 +58,198 @@ body {
     background:
         radial-gradient(
             circle at 10% 10%,
-            rgba(99, 102, 241, 0.13),
-            transparent 30%
+            rgba(18, 150, 219, 0.14),
+            transparent 28%
         ),
         radial-gradient(
-            circle at 90% 15%,
-            rgba(139, 92, 246, 0.10),
-            transparent 28%
+            circle at 90% 20%,
+            rgba(255, 216, 77, 0.18),
+            transparent 22%
         ),
         linear-gradient(
             180deg,
-            #f8faff 0%,
-            #f7f8fc 45%,
-            #ffffff 100%
+            #f2fbff 0%,
+            #ffffff 55%,
+            #f7fcff 100%
         );
 
     min-height: 100vh;
 }
 
 
-/* Decorative background glow */
-
-body::before {
-    content: "";
-
-    position: fixed;
-
-    width: 400px;
-    height: 400px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(99, 102, 241, 0.13),
-            transparent 70%
-        );
-
-    top: 35%;
-    left: -180px;
-
-    pointer-events: none;
-
-    z-index: -1;
-}
-
-
-/* -------------------------
+/* =========================================================
    Navigation
-------------------------- */
+========================================================= */
 
 nav {
     position: sticky;
-
-    top: 16px;
-
+    top: 14px;
     z-index: 1000;
 
     width: min(1100px, calc(100% - 40px));
 
     margin: 20px auto;
 
-    padding: 12px 18px;
+    padding: 10px 16px;
 
     display: flex;
-
     justify-content: flex-end;
     align-items: center;
+    gap: 6px;
 
-    gap: 8px;
-
-    background: rgba(255, 255, 255, 0.75);
+    background:
+        rgba(255, 255, 255, 0.88);
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border:
+        2px solid rgba(18, 150, 219, 0.16);
 
-    border-radius: 18px;
+    border-radius: 999px;
 
     box-shadow:
-        0 8px 30px rgba(15, 23, 42, 0.08);
+        0 8px 25px rgba(18, 150, 219, 0.10);
 }
 
 
 nav a {
-    position: relative;
+    padding: 8px 14px;
 
-    padding: 9px 14px;
+    border-radius: 999px;
 
-    border-radius: 10px;
-
-    color: #475569;
+    color: var(--blue-dark);
 
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
 
     text-decoration: none;
 
-    transition:
-        color 0.25s ease,
-        background 0.25s ease,
-        transform 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 
 nav a:hover {
-    color: var(--primary);
+    color: white;
 
-    background: rgba(99, 102, 241, 0.08);
+    background: var(--blue);
 
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 
-/* -------------------------
-   Header / Hero
-------------------------- */
+/* =========================================================
+   Hero
+========================================================= */
 
 header {
+    position: relative;
+
     width: min(1050px, calc(100% - 40px));
 
-    margin: 90px auto 70px;
+    margin: 85px auto 60px;
 
-    padding: 80px 70px;
-
-    position: relative;
+    padding: 75px 70px;
 
     overflow: hidden;
 
-    border-radius: 32px;
+    border-radius: 34px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255, 255, 255, 0.95),
-            rgba(238, 242, 255, 0.90)
+            #ffffff 0%,
+            #e8f7ff 55%,
+            #cbeeff 100%
         );
 
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    border:
+        2px solid rgba(18, 150, 219, 0.15);
 
     box-shadow:
-        0 25px 70px rgba(79, 70, 229, 0.11);
+        0 25px 65px rgba(18, 150, 219, 0.16);
 }
 
 
-/* Hero decorative glow */
+/*
+   Large Doraemon-blue decorative circle
+*/
 
 header::before {
     content: "";
 
     position: absolute;
 
-    width: 330px;
-    height: 330px;
+    width: 350px;
+    height: 350px;
 
-    right: -100px;
-    top: -130px;
+    right: -120px;
+    top: -140px;
 
     border-radius: 50%;
 
     background:
         linear-gradient(
             135deg,
-            rgba(99, 102, 241, 0.25),
-            rgba(139, 92, 246, 0.15)
+            #36b6f4,
+            var(--blue)
         );
 
-    filter: blur(3px);
+    opacity: 0.95;
 }
 
+
+/*
+   Yellow bell-like decorative circle
+*/
 
 header::after {
     content: "";
 
     position: absolute;
 
-    width: 180px;
-    height: 180px;
+    width: 90px;
+    height: 90px;
 
-    right: 100px;
-    bottom: -120px;
+    right: 115px;
+    bottom: -28px;
 
     border-radius: 50%;
 
-    background:
-        rgba(14, 165, 233, 0.13);
+    background: var(--yellow);
+
+    border: 7px solid white;
+
+    box-shadow:
+        0 7px 18px rgba(32, 48, 64, 0.12);
 }
 
 
 header h1 {
     position: relative;
+    z-index: 2;
 
-    margin: 0 0 18px;
+    margin: 0 0 20px;
 
-    font-size: clamp(46px, 7vw, 76px);
+    font-size: clamp(48px, 7vw, 76px);
 
     line-height: 1;
 
     letter-spacing: -3px;
 
-    font-weight: 800;
+    font-weight: 850;
 
-    background:
-        linear-gradient(
-            120deg,
-            #172033,
-            #4338ca 55%,
-            #8b5cf6
-        );
-
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    color: transparent;
+    color: var(--blue-dark);
 }
 
 
 header p {
     position: relative;
+    z-index: 2;
 
     max-width: 650px;
 
-    margin: 7px 0;
+    margin: 6px 0;
 
     color: var(--text-soft);
 
@@ -295,90 +258,82 @@ header p {
 
 
 header p:first-of-type {
-    margin-top: 25px;
-
-    color: var(--primary-dark);
-
-    font-weight: 700;
+    margin-top: 26px;
 
     font-size: 21px;
+
+    font-weight: 750;
+
+    color: var(--red);
 }
 
 
-/* -------------------------
-   Header links
-------------------------- */
+/* =========================================================
+   Hero Links
+========================================================= */
 
 .links {
-    margin-top: 30px !important;
+    margin-top: 28px !important;
 }
 
 
 .links a {
     display: inline-block;
 
-    margin: 7px 5px 7px 0;
+    margin: 6px 6px 6px 0;
 
-    padding: 9px 16px;
+    padding: 9px 17px;
 
-    color: var(--primary-dark);
+    color: var(--blue-dark);
 
     font-size: 14px;
-    font-weight: 650;
+    font-weight: 700;
 
     text-decoration: none;
 
-    background:
-        rgba(99, 102, 241, 0.08);
+    background: white;
 
     border:
-        1px solid rgba(99, 102, 241, 0.14);
+        2px solid rgba(18, 150, 219, 0.18);
 
     border-radius: 999px;
 
-    transition:
-        all 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 
 .links a:hover {
     color: white;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--primary),
-            var(--secondary)
-        );
+    background: var(--blue);
 
-    border-color: transparent;
+    border-color: var(--blue);
 
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 
     box-shadow:
-        0 8px 18px rgba(99, 102, 241, 0.25);
+        0 9px 20px rgba(18, 150, 219, 0.25);
 }
 
 
-/* -------------------------
+/* =========================================================
    Sections
-------------------------- */
+========================================================= */
 
 section {
     width: min(1000px, calc(100% - 40px));
 
-    margin: 30px auto;
+    margin: 28px auto;
 
     padding: 45px 50px;
 
-    background: var(--card-bg);
+    background:
+        rgba(255, 255, 255, 0.92);
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    border:
+        2px solid var(--border);
 
-    border: 1px solid var(--border);
-
-    border-radius: 24px;
+    border-radius: 26px;
 
     box-shadow: var(--shadow);
 
@@ -394,31 +349,37 @@ section {
 section:hover {
     transform: translateY(-4px);
 
-    box-shadow: var(--shadow-hover);
-
     border-color:
-        rgba(99, 102, 241, 0.20);
+        rgba(18, 150, 219, 0.30);
+
+    box-shadow: var(--shadow-hover);
 }
 
 
-/* -------------------------
-   Section headings
-------------------------- */
+/* =========================================================
+   Section Titles
+========================================================= */
 
 h2 {
     position: relative;
 
+    display: inline-block;
+
     margin: 0 0 30px;
 
-    padding-left: 18px;
+    padding-left: 22px;
 
-    font-size: 28px;
+    font-size: 29px;
 
     letter-spacing: -0.7px;
 
-    color: #172033;
+    color: var(--blue-dark);
 }
 
+
+/*
+   Red collar-style accent
+*/
 
 h2::before {
     content: "";
@@ -428,48 +389,57 @@ h2::before {
     left: 0;
     top: 8px;
 
-    width: 5px;
-    height: 28px;
+    width: 7px;
+    height: 29px;
 
     border-radius: 10px;
 
-    background:
-        linear-gradient(
-            180deg,
-            var(--primary),
-            var(--secondary)
-        );
+    background: var(--red);
+}
+
+
+/*
+   Little yellow dot
+*/
+
+h2::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    right: -16px;
+    top: 3px;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
 }
 
 
 h3 {
     margin-bottom: 5px;
 
-    color: #27314b;
+    color: #25384a;
 
     font-size: 19px;
-
-    font-weight: 700;
 }
 
 
-/* -------------------------
+/* =========================================================
    Text
-------------------------- */
+========================================================= */
 
 p {
     color: var(--text-soft);
 }
 
 
-section > p {
-    font-size: 16px;
-}
-
-
-/* -------------------------
-   Lists
-------------------------- */
+/* =========================================================
+   Research Interests
+========================================================= */
 
 ul {
     padding-left: 0;
@@ -484,82 +454,98 @@ ul li {
     margin: 12px 0;
 
     padding:
-        12px 16px
-        12px 42px;
+        13px 18px
+        13px 48px;
 
-    border-radius: 12px;
+    border-radius: 15px;
 
     background:
-        rgba(248, 250, 252, 0.75);
+        linear-gradient(
+            90deg,
+            #effaff,
+            #ffffff
+        );
 
     border:
-        1px solid rgba(148, 163, 184, 0.14);
+        1px solid rgba(18, 150, 219, 0.12);
 
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 
+/*
+   Doraemon-like blue circle bullet
+*/
+
 ul li::before {
-    content: "✦";
+    content: "";
 
     position: absolute;
 
-    left: 16px;
+    left: 18px;
+    top: 50%;
 
-    color: var(--primary);
+    width: 13px;
+    height: 13px;
 
-    font-size: 14px;
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    border:
+        3px solid white;
+
+    box-shadow:
+        0 0 0 2px rgba(18, 150, 219, 0.20);
 }
 
 
 ul li:hover {
-    background:
-        rgba(99, 102, 241, 0.06);
+    transform: translateX(6px);
 
-    transform: translateX(5px);
+    background: var(--blue-light);
 }
 
 
-/* -------------------------
-   Entries
+/* =========================================================
    Education / Experience
-------------------------- */
+========================================================= */
 
 .entry {
     position: relative;
 
     margin-top: 20px;
 
-    padding:
-        24px 26px;
+    padding: 24px 28px;
 
     border-left:
-        3px solid rgba(99, 102, 241, 0.65);
+        5px solid var(--blue);
 
     border-radius:
-        0 16px 16px 0;
+        0 17px 17px 0;
 
     background:
         linear-gradient(
             90deg,
-            rgba(99, 102, 241, 0.06),
+            rgba(18, 150, 219, 0.08),
             rgba(255, 255, 255, 0)
         );
 
-    transition:
-        transform 0.25s ease;
+    transition: transform 0.25s ease;
 }
 
 
 .entry:hover {
-    transform: translateX(5px);
+    transform: translateX(6px);
 }
 
 
 .entry h3 {
     margin-top: 0;
+
+    color: var(--blue-dark);
 }
 
 
@@ -568,9 +554,9 @@ ul li:hover {
 }
 
 
-/* -------------------------
+/* =========================================================
    Publications
-------------------------- */
+========================================================= */
 
 .publication {
     position: relative;
@@ -579,87 +565,97 @@ ul li:hover {
         20px 0 30px;
 
     padding:
-        25px 28px;
+        26px 28px;
 
-    border-radius: 18px;
+    overflow: hidden;
+
+    border-radius: 20px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255, 255, 255, 0.9),
-            rgba(248, 250, 252, 0.92)
+            #ffffff,
+            #f5fcff
         );
 
     border:
-        1px solid rgba(148, 163, 184, 0.18);
+        2px solid rgba(18, 150, 219, 0.12);
 
     box-shadow:
-        0 6px 20px rgba(15, 23, 42, 0.04);
+        0 6px 20px rgba(18, 150, 219, 0.06);
 
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+
+/*
+   Blue strip
+*/
+
+.publication::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 6px;
+    height: 100%;
+
+    background: var(--blue);
 }
 
 
 .publication:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 
     border-color:
-        rgba(99, 102, 241, 0.25);
+        rgba(18, 150, 219, 0.30);
 
     box-shadow:
-        0 14px 30px rgba(79, 70, 229, 0.10);
+        0 16px 35px rgba(18, 150, 219, 0.13);
 }
 
 
 .publication strong {
-    color: #25304a;
+    color: #263849;
 }
 
 
 .publication a {
     display: inline-block;
 
-    margin-top: 4px;
+    margin-top: 5px;
 
-    padding:
-        6px 13px;
+    padding: 7px 15px;
 
     border-radius: 999px;
 
-    color: var(--primary-dark);
+    color: white;
 
-    font-weight: 650;
+    font-weight: 700;
 
     font-size: 14px;
 
     text-decoration: none;
 
-    background:
-        rgba(99, 102, 241, 0.08);
+    background: var(--blue);
 
-    transition:
-        all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 
 .publication a:hover {
-    color: white;
+    background: var(--red);
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--primary),
-            var(--secondary)
-        );
+    transform: translateY(-2px);
 }
 
 
-/* -------------------------
+/* =========================================================
    Projects
-------------------------- */
+========================================================= */
 
 .project {
     margin: 20px 0;
@@ -667,61 +663,77 @@ ul li:hover {
     padding: 25px;
 
     border:
-        1px solid rgba(148, 163, 184, 0.18);
+        2px solid rgba(18, 150, 219, 0.13);
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.75);
+    background: white;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 
 .project:hover {
     transform: translateY(-5px);
 
+    border-color: var(--blue);
+
     box-shadow:
-        0 18px 35px rgba(15, 23, 42, 0.08);
+        0 15px 30px rgba(18, 150, 219, 0.12);
 }
 
 
-/* -------------------------
-   General links
-------------------------- */
+/* =========================================================
+   General Links
+========================================================= */
 
 a {
-    color: var(--primary);
+    color: var(--blue-dark);
 
     text-underline-offset: 4px;
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
 a:hover {
-    color: var(--secondary);
+    color: var(--red);
 }
 
 
-/* -------------------------
+/* =========================================================
    Footer
-------------------------- */
+========================================================= */
 
 footer {
+    position: relative;
+
     width: min(1000px, calc(100% - 40px));
 
-    margin: 80px auto 40px;
+    margin: 75px auto 40px;
 
-    padding: 30px;
+    padding: 35px;
 
     text-align: center;
 
     border-top:
-        1px solid rgba(148, 163, 184, 0.2);
+        2px solid rgba(18, 150, 219, 0.14);
+}
+
+
+footer::before {
+    content: "●";
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--yellow);
+
+    font-size: 24px;
+
+    text-shadow:
+        0 0 0 var(--blue);
 }
 
 
@@ -732,20 +744,20 @@ footer p {
 }
 
 
-/* -------------------------
-   Selection
-------------------------- */
+/* =========================================================
+   Highlight selection
+========================================================= */
 
 ::selection {
     color: white;
 
-    background: var(--primary);
+    background: var(--blue);
 }
 
 
-/* -------------------------
-   Scroll bar
-------------------------- */
+/* =========================================================
+   Scrollbar
+========================================================= */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -753,21 +765,17 @@ footer p {
 
 
 ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #eef9ff;
 }
 
 
 ::-webkit-scrollbar-thumb {
-    background:
-        linear-gradient(
-            var(--primary),
-            var(--secondary)
-        );
+    background: var(--blue);
 
     border-radius: 10px;
 
     border:
-        2px solid #f1f5f9;
+        2px solid #eef9ff;
 }
 
 
@@ -783,8 +791,6 @@ footer p {
         overflow-x: auto;
 
         white-space: nowrap;
-
-        padding: 10px;
     }
 
 
@@ -797,11 +803,6 @@ footer p {
         margin-top: 55px;
 
         padding: 60px 40px;
-    }
-
-
-    header h1 {
-        letter-spacing: -2px;
     }
 
 
@@ -824,8 +825,6 @@ footer p {
             calc(100% - 20px);
 
         margin: 10px auto;
-
-        border-radius: 14px;
     }
 
 
@@ -844,14 +843,34 @@ footer p {
             40px auto 30px;
 
         padding:
-            48px 25px;
+            50px 25px;
 
-        border-radius: 22px;
+        border-radius: 24px;
+    }
+
+
+    header::before {
+        width: 230px;
+        height: 230px;
+
+        right: -120px;
+        top: -120px;
+    }
+
+
+    header::after {
+        width: 65px;
+        height: 65px;
+
+        right: 40px;
+        bottom: -25px;
+
+        border-width: 5px;
     }
 
 
     header h1 {
-        font-size: 46px;
+        font-size: 45px;
 
         letter-spacing: -2px;
     }
@@ -859,11 +878,6 @@ footer p {
 
     header p {
         font-size: 16px;
-    }
-
-
-    header p:first-of-type {
-        font-size: 18px;
     }
 
 
@@ -875,7 +889,7 @@ footer p {
 
         padding: 30px 24px;
 
-        border-radius: 20px;
+        border-radius: 21px;
     }
 
 
@@ -887,10 +901,5 @@ footer p {
     .publication,
     .project {
         padding: 20px;
-    }
-
-
-    footer {
-        margin-top: 50px;
     }
 }
