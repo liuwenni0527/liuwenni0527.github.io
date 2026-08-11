@@ -903,3 +903,53 @@ footer p {
         padding: 20px;
     }
 }
+/* =========================================================
+   GTR R35 Desktop Cars
+========================================================= */
+
+#car-world {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.desktop-car {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 90px;
+    height: auto;
+
+    user-select: none;
+    pointer-events: none;
+
+    will-change: transform;
+
+    filter:
+        drop-shadow(
+            0 7px 8px
+            rgba(0, 0, 0, 0.20)
+        );
+}
+
+nav,
+header,
+section,
+footer {
+    position: relative;
+
+    z-index: 10;
+}
